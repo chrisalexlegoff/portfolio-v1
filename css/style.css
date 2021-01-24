@@ -1,0 +1,69 @@
+:root {
+    --primary-color:rgb(255, 255, 255);
+    --menu-wrap-color: rgb(0, 0, 0);
+    --menu-link-color: rgb(0, 0, 0);
+    --logo-first-color: rgb(0, 0, 0);
+    --logo-second-color: rgb(255, 255, 255);
+    --logo-third-color: rgba(255, 102, 0, 0.849);
+    --link-color: rgba(255, 102, 0, 0.849);
+    --link-overlay-color: rgb(255, 0, 0);
+    --name-first-color: rgb(0, 0, 0);
+    --name-second-color: rgb(255, 255, 255);
+    --overlay-color: rgba(173, 170, 170, 0.904);
+    --logo-animation-speed: 4s;
+    --menu-animation-speed: 4s;
+    --social-link-animation-hover-speed: 1.4s;
+    --social-link-color-hover-speed: 1s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Charm' , cursive;
+    font-size: 1.2rem;
+    text-shadow: 4px 4px 4px rgb(151, 134, 134);
+}
+
+ul, li, a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover, li:hover {
+    color: var(--link-overlay-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+blockquote {
+    margin: 1em;
+}
+
+blockquote p {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}

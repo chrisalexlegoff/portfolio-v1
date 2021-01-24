@@ -1,0 +1,104 @@
+.container .logo {
+    width: 15%;
+    margin-bottom: 3rem;
+    /* height: auto; */
+}
+
+.container .logo svg {
+    height: auto;
+    width: 100%;
+}
+
+.container .logo rect {
+    stroke: var(--logo-third-color);
+    fill: var(--logo-third-color); 
+}
+
+.container .rect-logo-one, .rect-logo-six {
+    transform: scalex(0.5);
+    transform-origin: center;
+    -webkit-animation: rect-logo 1.5s linear forwards;
+            animation: rect-logo 1.5s linear forwards;
+}
+
+.container .rect-logo-two, .rect-logo-five {
+    transform: scalex(0.5);
+    transform-origin: center;
+    -webkit-animation: rect-logo 1.5s 1s linear forwards;
+            animation: rect-logo 1.5s 1s linear forwards;
+}
+
+.container .rect-logo-three, .rect-logo-for {
+    transform: scalex(0.5);
+    transform-origin: center;
+    -webkit-animation: rect-logo 1.5s 2s linear forwards;
+            animation: rect-logo 1.5s 2s linear forwards;
+}
+  
+@-webkit-keyframes rect-logo {
+    to {
+      transform: scalex(1);
+    }
+ }
+  
+@keyframes rect-logo {
+    to {
+      transform: scalex(1);
+    }
+ }
+
+.container .logo path.one, .three {
+    fill: var(--logo-first-color);
+    -webkit-animation: rotate-logo var(--logo-animation-speed) ease;
+            animation: rotate-logo var(--logo-animation-speed) ease;
+}
+
+.container .logo path.two {
+    fill: var(--logo-second-color);
+    -webkit-animation: rotate-logo-inverse var(--logo-animation-speed) ease;
+            animation: rotate-logo-inverse var(--logo-animation-speed) ease;
+}
+
+.container .logo path.for, .six {
+    fill: var(--logo-third-color);
+    -webkit-animation: rotate-logo-inverse var(--logo-animation-speed) ease;
+            animation: rotate-logo-inverse var(--logo-animation-speed) ease;
+}
+
+@-webkit-keyframes rotate-logo {
+    from { transform-origin: center; transform: rotate(0deg); }
+    to { transform-origin: center; transform: rotate(360deg); }
+}
+
+@keyframes rotate-logo {
+    from { transform-origin: center; transform: rotate(0deg); }
+    to { transform-origin: center; transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rotate-logo-inverse {
+    from { transform-origin: center; transform: rotate(360deg); }
+    to { transform-origin: center; transform: rotate(0deg); }
+}
+
+@keyframes rotate-logo-inverse {
+    from { transform-origin: center; transform: rotate(360deg); }
+    to { transform-origin: center; transform: rotate(0deg); }
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+    .container .logo {
+        width: 30%;
+        margin-bottom: 1em;
+        /* height: auto; */
+    }
+}
+
+  /* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 600px) {
+    .container .logo {
+        width: 40%;
+        margin-bottom: 1em;
+        /* height: auto; */
+    }
+}

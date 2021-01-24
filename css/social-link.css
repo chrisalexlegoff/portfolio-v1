@@ -1,0 +1,58 @@
+.container .social-link  {
+    padding: 1rem;
+}
+
+.container .social-link svg {
+    width: 6vw;
+    height: auto;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.container .social-link svg > .icon  {
+    transition: fill var(--social-link-color-hover-speed) ease-in-out;
+}
+
+.container .social-link svg:hover > .icon {
+    fill: var(--logo-third-color);
+
+}
+
+.container .social-link svg:hover {
+    -webkit-animation: animation-social-link-hover var(--social-link-animation-hover-speed) ease-in-out;
+            animation: animation-social-link-hover var(--social-link-animation-hover-speed) ease-in-out;
+}
+
+@-webkit-keyframes animation-social-link-hover {
+    0% { transform-origin: center; transform: skewX(10deg); }
+    25% { transform-origin: center; transform: skewX(-10deg); }
+    50% { transform-origin: center; transform: rotate(35deg); }
+    100%{ transform-origin: center; transform: rotate(0deg); }
+}
+
+@keyframes animation-social-link-hover {
+    0% { transform-origin: center; transform: skewX(10deg); }
+    25% { transform-origin: center; transform: skewX(-10deg); }
+    50% { transform-origin: center; transform: rotate(35deg); }
+    100%{ transform-origin: center; transform: rotate(0deg); }
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+    .container .about {
+        width: 50%;
+    }
+    .container .social-link svg {
+        width: 12vw;
+    }
+}
+
+  /* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 600px) {
+    .container .about {
+        width: 70%;
+    }
+    .container .social-link svg {
+        width: 18vw;
+    }
+}
